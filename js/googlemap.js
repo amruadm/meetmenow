@@ -94,12 +94,22 @@ $(document).ready(function () {
         //     title: 'Hello world!'
         // });
         var infowindow = new google.maps.InfoWindow({
-            content: '<a href="/businesses/' +33 + '">' + 'dsad' + '</a><br/>' + 'Phone: ',
+            content: '' +
+            '<a target="_blank" onclick="openInstagram()">' + 'Instagram' + '</a><br/> ' +
+            '<a target="_blank" onclick="openYandexPhoto()">' + 'Yandex photo' + '</a><br/> ' +
+            '<a target="_blank" onclick="openGooglePhoto()">' + 'Google photo' + '</a><br/> ' +
+            'WhatsApp: ' + '89147773355' + '<br/> '
+            + 'Telegram: ' + 'liberty' + '<br/> ',
             position: position,
             map: map
         });
     }
-    
+
+
+    // function openInstagram() {
+    //     window.open("https://www.instagram.com/explore/tags/Зума/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+    // }
+
     function nearbySearch(myLatLng, type) {
         var request = {
             location: myLatLng,
@@ -123,10 +133,21 @@ $(document).ready(function () {
         }
     }
 
+
+
 });
 
+function openInstagram() {
+    window.open("https://www.instagram.com/explore/tags/Зума/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+}
 
+function openYandexPhoto() {
+    window.open("https://yandex.ru/images/search?text=Зума+Владивосток", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+}
 
+function openGooglePhoto() {
+    window.open("https://www.google.ru/search?q=russia&tbm=isch", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+}
 // function createMarker(position) {
     //
     //     new google.maps.Marker({
