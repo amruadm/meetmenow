@@ -50,6 +50,9 @@ Route::get('/about', ['as' => 'about', 'uses' => 'PagesController@getAbout']);
 Route::get('/', ['as' => 'main', 'uses' => 'PagesController@getIndex']);
 
 Route::resource('posts', 'PostController');
+
+Route::resource('places', 'PlaceController');
+
 Route::get('/services', ['as' => 'services', 'uses' => 'PagesController@getServices']);
 
 Route::get('/rates', ['as' => 'rates', 'uses' => 'PagesController@getRates']);
