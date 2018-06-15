@@ -29,6 +29,8 @@ class MainPlaces extends Migration
             $table->text('instagram_stream');
             $table->integer('user_id');
             $table->integer('moderator_id');
+            $table->float('latitude');
+            $table->float('longitude');
             $table->timestamps();
         });
     }

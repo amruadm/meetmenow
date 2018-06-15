@@ -13,7 +13,10 @@ class Houses extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('houses', function (Blueprint $table) {
+            $table->increments('id');
+            $table->text('house_name');
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class Houses extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('houses');
     }
 }

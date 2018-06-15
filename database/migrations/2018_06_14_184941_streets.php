@@ -13,7 +13,10 @@ class Streets extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('streets', function (Blueprint $table) {
+            $table->increments('id');
+            $table->text('street_name');
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class Streets extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('streets');
     }
 }

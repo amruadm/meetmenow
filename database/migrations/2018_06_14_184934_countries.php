@@ -13,7 +13,10 @@ class Countries extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('countries', function (Blueprint $table) {
+            $table->increments('id');
+            $table->text('country_name');
+        });
     }
 
     /**
@@ -21,8 +24,10 @@ class Countries extends Migration
      *
      * @return void
      */
+
     public function down()
     {
-        //
+        Schema::dropIfExists('countries');
+
     }
 }
