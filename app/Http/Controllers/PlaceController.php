@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Place;
+use Session;
+
 
 class PlaceController extends Controller
 {
@@ -29,9 +32,7 @@ class PlaceController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        $tags = Tag::all();
-        return view('places.create')->withCategories($categories)->withTags($tags);
+        return view('places.create');
     }
 
 
@@ -46,36 +47,25 @@ class PlaceController extends Controller
         // validate the data
         $this->validate($request, array(
             'title'         => 'required|max:255',
-            'slug'          => 'required|alpha_dash|min:5|max:255|unique:places,slug',
-            'category_id'   => 'required|integer',
-            'body'          => 'required'
+            'description'          => 'required'
         ));
 
         // store in the database
-        $place = new Place;
+        $place = new Place();
+        $place->setTable('main_places');
 
         $place->title = $request->title;
-        $place->slug = $request->slug;
-        $place->category_id = $request->category_id;
-        $place->body = $request->body; // $request->body;
-        //$place->body = Purifier::clean($request->body);
-
-        if ($request->hasFile('featured_img')) {
-            $image = $request->file('featured_img');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
-            $location = public_path('images/' . $filename);
-            Image::make($image)->resize(800, 400)->save($location);
-
-            $place->image = $filename;
-        }
+        $place->whatsapp = $request->whatsapp;
+        $place->telegram = $request->telegram;
+        $place->description = $request->description; // $request->body;
 
         $place->save();
 
         //$place->tags()->sync($request->tags, false);
 
-        Session::flash('success', 'The blog place was successfully save!');
+        Session::flash('success', 'Место успешно добавлено в карты!');
 
-        return redirect()->route('places.show', $place->id);
+        return redirect()->route('main');
     }
 
     /**

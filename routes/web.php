@@ -72,3 +72,11 @@ Route::post('common', 'PagesController@postCommon');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//
+//Route::group(['prefix' => 'dir'], function () {
+//    Route::group(['prefix' => 'ele'], function () {
+//        Route::controller('/', 'eleController@redirect');
+//    });
+//});

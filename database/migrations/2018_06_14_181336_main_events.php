@@ -33,6 +33,7 @@ class MainEvents extends Migration
             $table->integer('moderator_id');
             $table->float('latitude');
             $table->float('longitude');
+            $table->text('description');
             $table->timestamps();
         });
     }
