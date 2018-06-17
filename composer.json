@@ -13,7 +13,8 @@
         "illuminate/config": "5.1.*|5.2.*|5.3.*|5.4.*",
         "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*",
         "illuminate/filesystem": "5.1.*|5.2.*|5.3.*|5.4.*",
-        "ezyang/htmlpurifier": "4.8.*"
+        "ezyang/htmlpurifier": "4.8.*",
+        "guzzlehttp/guzzle":"*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

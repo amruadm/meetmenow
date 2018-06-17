@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Place;
 use Session;
+use App\CustomStaff\Authorization\VkAuthorization;
 
 
 class PlaceController extends Controller
@@ -44,6 +45,8 @@ class PlaceController extends Controller
      */
     public function store(Request $request)
     {
+
+        $this->getLogin($request);
         // validate the data
         $this->validate($request, array(
             'title'         => 'required|max:255',
@@ -66,6 +69,27 @@ class PlaceController extends Controller
         Session::flash('success', 'Место успешно добавлено в карты!');
 
         return redirect()->route('main');
+    }
+
+    public function getLogin(Request $request) {
+        $vkAthorization = new VkAuthorization();
+
+//
+//        $curl = $vkAthorization->getAccessToken($request);
+//
+//        print_r($curl);
+//        die;
+        $mainUserInfo = $vkAthorization->getMainUserInfo();
+
+        print_r($mainUserInfo);
+        die;
+
+//        $mainUser = $mainUserInfo->response[0];
+//
+//        $UserFriendsInfo = $vkAthorization->getUserFriendsInfo($request_access_token, $access_token);
+//        $friends = $UserFriendsInfo->response->items;
+//
+//        return view('todo.login')->withMainUser($mainUser)->withFriends($friends);
     }
 
     /**
