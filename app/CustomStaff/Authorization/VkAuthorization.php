@@ -97,6 +97,42 @@ class VkAuthorization {
             return json_decode($response->getBody());
     }
 
+    /*Получение Основной информации о пользователи, производящим вход через вк*/
+    public function getGoogleCoordinates()
+    {
+        $client = new \GuzzleHttp\Client();
+
+        $response = $client->get('http://maps.google.com/maps/api/geocode/json?', [
+            'query' => [
+                    'address' => '1600+Amphitheatre+Parkway,+Mountain+View,+CA
+'
+            ]
+        ]);
+
+//        $token = $response->getBody()->getContents()
+//
+//            $url = 'https://geocode-maps.yandex.ru/1.x/?format=json&geocode=Moscow,%20street%20new%20Arbat,%20house';
+//            $client = new \GuzzleHttp\Client();
+//            $response = $client->request('GET', $url, [
+////                'proxy' => [
+////                    'http' => 'tcp://'.$this->proxy, //
+////                    'https' => 'tcp://'.$this->proxy, //
+////                ],
+//                'form_params' => [
+//                    'format' => 'json',
+//                    'geocode' => 'Moscow,%20street%20new%20Arbat,%20house'
+//                ],
+//                'verify' => false
+//
+//            ]);
+        $resp = json_decode($response->getBody(), true);
+        var_dump($resp);
+        die;
+        return json_decode($response->getBody());
+    }
+
+
+
     /*Получение информации друзьях пользователя*/
     public function getUserFriendsInfo($request_access_token, $access_token)
     {

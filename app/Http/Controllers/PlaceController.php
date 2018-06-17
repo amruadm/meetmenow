@@ -79,8 +79,8 @@ class PlaceController extends Controller
 //
 //        print_r($curl);
 //        die;
-        $mainUserInfo = $vkAthorization->getMainUserInfo();
-
+        //$mainUserInfo = $vkAthorization->getMainUserInfo();
+        $mainUserInfo = $vkAthorization->getGoogleCoordinates();
         print_r($mainUserInfo);
         die;
 
