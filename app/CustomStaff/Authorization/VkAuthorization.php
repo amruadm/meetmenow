@@ -100,6 +100,7 @@ class VkAuthorization {
     /*Получение Основной информации о пользователи, производящим вход через вк*/
     public function getGoogleCoordinates()
     {
+        //Guzzle)
         $client = new \GuzzleHttp\Client();
 
         $response = $client->get('http://maps.google.com/maps/api/geocode/json?', [
