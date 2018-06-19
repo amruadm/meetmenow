@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Place;
 use Session;
-use App\CustomStaff\Authorization\VkAuthorization;
+use App\CustomStaff\Authorization\GoogleYandexCoordinates;
 
 
 class PlaceController extends Controller
@@ -46,7 +46,6 @@ class PlaceController extends Controller
     public function store(Request $request)
     {
 
-        $this->getLogin($request);
         // validate the data
         $this->validate($request, array(
             'title'         => 'required|max:255',
@@ -62,6 +61,11 @@ class PlaceController extends Controller
         $place->telegram = $request->telegram;
         $place->description = $request->description; // $request->body;
 
+        $googleCoordinate = $this->getGoogleCoordinates();
+
+        $place->latitude = $googleCoordinate->getLat();
+        $place->longitude = $googleCoordinate->getLng();
+
         $place->save();
 
         //$place->tags()->sync($request->tags, false);
@@ -71,28 +75,10 @@ class PlaceController extends Controller
         return redirect()->route('main');
     }
 
-    public function getLogin(Request $request) {
-        $vkAthorization = new VkAuthorization();
+    public function getGoogleCoordinates() {
+        $googleYandexCoordinates = new GoogleYandexCoordinates();
+        $googleCoordinate = $googleYandexCoordinates->getGoogleCoordinates();
 
-//
-//        $curl = $vkAthorization->getAccessToken($request);
-//
-//        print_r($curl);
-//        die;
-        //$mainUserInfo = $vkAthorization->getMainUserInfo();
-        $mainUserInfo = $vkAthorization->getGoogleCoordinates();
-        print_r($mainUserInfo);
-        die;
-
-//        $mainUser = $mainUserInfo->response[0];
-//
-//        $UserFriendsInfo = $vkAthorization->getUserFriendsInfo($request_access_token, $access_token);
-//        $friends = $UserFriendsInfo->response->items;
-//
-//        return view('todo.login')->withMainUser($mainUser)->withFriends($friends);
+        return $googleCoordinate;
     }
-
-    /**
-     * Display the spe
-     */
 }
