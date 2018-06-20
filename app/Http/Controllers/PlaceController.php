@@ -63,8 +63,8 @@ class PlaceController extends Controller
 
         $googleCoordinate = $this->getGoogleCoordinates();
 
-        $place->latitude = $googleCoordinate->getLat();
-        $place->longitude = $googleCoordinate->getLng();
+        $place->google_latitude = $googleCoordinate->getLat();
+        $place->google_longitude = $googleCoordinate->getLng();
 
         $place->save();
 
