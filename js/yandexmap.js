@@ -37,16 +37,28 @@
                 }
             });
 
-            var placemark = new ymaps.Placemark([55.650625, 37.62708], {
-                title: 'Север'
+            // var placemark = new ymaps.Placemark([55.650625, 37.62708], {
+            //     title: 'Север'
+            //
+            // }, {
+            //     balloonContentLayout: MyBalloonContentLayout,
+            //     hintContentLayout: ymaps.templateLayoutFactory.createClass(33)
+            //     //balloonPanelMaxMapArea: 0
+            // });
+            //
+            // map.geoObjects.add(placemark);
+             var lat = $('.place_lat_7').text();
+             var lng = $('.place_lng_7').text();
+             var placemark = new ymaps.Placemark([parseFloat(lat), parseFloat(lng)], {
+                 title: 'Север'
 
-            }, {
-                balloonContentLayout: MyBalloonContentLayout,
-                hintContentLayout: ymaps.templateLayoutFactory.createClass(33)
-                //balloonPanelMaxMapArea: 0
-            });
+             }, {
+                 balloonContentLayout: MyBalloonContentLayout,
+                 hintContentLayout: ymaps.templateLayoutFactory.createClass(33)
+                 //balloonPanelMaxMapArea: 0
+             });
 
-            map.geoObjects.add(placemark);
+             map.geoObjects.add(placemark);
 
 
         });

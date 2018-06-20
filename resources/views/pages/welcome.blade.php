@@ -19,11 +19,11 @@
             <p>Телефон: +7(423) 226-88-50</p>
             <h2>Расписание</h2>
             <em>ПРИЕМ ГРАЖДАН</em>
-            <p>По рабочим дням:<br />
-                С 10:00 до 17:00 <br />
-                Обед с 13:00 до 14:00</p> <br />
-            <u>Выходные:</u><br />
-            <p>Суббота, Воскресенье</p><br />
+            <p>По рабочим дням:<br/>
+                С 10:00 до 17:00 <br/>
+                Обед с 13:00 до 14:00</p> <br/>
+            <u>Выходные:</u><br/>
+            <p>Суббота, Воскресенье</p><br/>
             @if (Auth::check())
                 <div>
                     {!! Form::open(['route' => 'calendars.store', 'method' => 'POST', 'hidden' => 'hidden']) !!}
@@ -43,32 +43,6 @@
                     {{ Form::submit('Create New calendar', ['class' => 'btn btn-primary btn-block btn-h1-spacing bad']) }}
 
                     {!! Form::close() !!}
-
-
-                    <form action="{{ url('/') }}" method="POST" hidden="hidden">
-                        {{ csrf_field() }}
-                        <div class="form-group">
-                            <label name="year2">year:</label>
-                            <input id="year2" name="year2" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label name="month2">Тема:</label>
-                            <input id="month2" name="month2" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label name="day2">Сообщение:</label>
-                            <input  id="day2" name="day2" class="day2">
-                        </div>
-
-                        <div class="form-group">
-                            <label name="busy2">Сообщение:</label>
-                            <input  id="busy2" name="busy2" class="busy2">
-                        </div>
-
-                        <input type="submit" value="Send Message" class="nice">
-                    </form>
 
                 </div>
 
@@ -102,7 +76,16 @@
                 </div>
 
                 <hr>
+            @endforeach
 
+            @foreach($places as $place)
+                <div class="place_{{ $loop->iteration }}">
+                    <p class="place_{{ $loop->iteration }}">{{ $place->title }}</p>
+                    <p class="place_{{ $loop->iteration }}">{!! $place->description !!}</p>
+                    <p class="place_lat_{{ $loop->iteration }}">{{ $place->latitude }}</p>
+                    <p class="place_lng_{{ $loop->iteration }}">{{ $place->longitude }}</p>
+                </div>
+                <hr>
             @endforeach
 
         </div>
@@ -125,7 +108,7 @@
 
     <script type="" src="{{ asset('js/yandexmap.js') }}">
     </script>
-    <script src="{{ asset('js/googlemap.js') }}" >
+    <script src="{{ asset('js/googlemap.js') }}">
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDeF9T6rl9y9rEVFcqRr3pU6CJEaRmqpQ&libraries=places"
             async defer></script>

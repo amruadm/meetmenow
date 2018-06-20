@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Post;
-use App\Calendar2;
+use App\Place;
 use Mail;
 use Session;
 
@@ -14,7 +14,10 @@ class PagesController extends Controller {
 
     public function getIndex() {
         $posts = Post::orderBy('created_at', 'asc')->limit(1)->get(); //переписать код
-        return view('pages.welcome')->withPosts($posts);
+
+        $places = Place::orderBy('created_at', 'asc')->get(); //переписать код
+
+        return view('pages.welcome')->withPosts($posts)->withPlaces($places);
     }
 
     public function indexCommon()

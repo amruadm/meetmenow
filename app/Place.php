@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Place extends Model
 {
+    protected $table = 'main_places';
     /* Set table name for sql insert /
     Устанавливает имя для вставляемые в sql таблицу*/
     public function setTable($table)
