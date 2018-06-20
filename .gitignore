@@ -12,9 +12,14 @@ public/storage
 public/hot
 storage/framework
 storage/framework/sessions
+storage/framework/views
+/storage/framework
+/storage/framework/sessions
+/storage/framework/views
 storage/logs
 storage/*.key
 .env.php
 .env
+.idea
 Homestead.yaml
 Homestead.json
