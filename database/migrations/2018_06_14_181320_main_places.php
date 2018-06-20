@@ -29,10 +29,10 @@ class MainPlaces extends Migration
             $table->text('instagram_stream');
             $table->integer('user_id');
             $table->integer('moderator_id');
-            $table->double('google_longitude', 10, 10);
-            $table->double('google_latitude', 10, 10);
-            $table->double('yandex_longitude', 10, 10);
-            $table->double('yandex_latitude', 10, 10);
+            $table->double('google_longitude', 10, 8);
+            $table->double('google_latitude', 10, 8);
+            $table->double('yandex_longitude', 10, 8);
+            $table->double('yandex_latitude', 10, 8);
             $table->text('description');
             $table->timestamps();
         });
