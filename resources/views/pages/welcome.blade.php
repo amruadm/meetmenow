@@ -80,10 +80,10 @@
 
             @foreach($places as $place)
                 <div class="place_{{ $loop->iteration }}">
-                    <p class="place_{{ $loop->iteration }}">{{ $place->title }}</p>
-                    <p class="place_{{ $loop->iteration }}">{!! $place->description !!}</p>
-                    <p class="place_lat_{{ $loop->iteration }}">{{ $place->latitude }}</p>
-                    <p class="place_lng_{{ $loop->iteration }}">{{ $place->longitude }}</p>
+                    <p class="place_title_{{ $loop->iteration }}">{{ $place->title }}</p>
+                    <p class="place_descr_{{ $loop->iteration }}">{!! $place->description !!}</p>
+                    <p class="place_lat_{{ $loop->iteration }}">{{ $place->google_latitude }}</p>
+                    <p class="place_lng_{{ $loop->iteration }}">{{ $place->google_longitude }}</p>
                 </div>
                 <hr>
             @endforeach

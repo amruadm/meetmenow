@@ -43,7 +43,7 @@ class CommentsController extends Controller
 
         $comment->save();
 
-        Session::flash('success', 'Comment was added');
+        Session::flash('success', 'Комментарий добавлен');
 
         return redirect()->route('blog.single', [$post->slug]);
     }
@@ -100,7 +100,7 @@ class CommentsController extends Controller
         $post_id = $comment->post->id;
         $comment->delete();
 
-        Session::flash('success', 'Deleted Comment');
+        Session::flash('success', 'Комментарий удален');
 
         return redirect()->route('posts.show', $post_id);
     }

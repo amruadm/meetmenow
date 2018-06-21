@@ -47,8 +47,8 @@
             // });
             //
             // map.geoObjects.add(placemark);
-             var lat = $('.place_lat_7').text();
-             var lng = $('.place_lng_7').text();
+             var lat = $('.place_lat_3').text();
+             var lng = $('.place_lng_3').text();
              var placemark = new ymaps.Placemark([parseFloat(lat), parseFloat(lng)], {
                  title: 'Север'
 
