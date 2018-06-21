@@ -29,7 +29,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Информация <span class="caret"></span></a>
                     <ul class="dropdown">
-                        <li><a href="{{ route('common') }}">Общая Информация</a></li>
+                        <li><a href="{{ route('common') }}">Справочник</a></li>
                         <li><a href="{{ route('heirs') }}">Наследникам</a></li>
                         <li><a href="{{ route('estate') }}">Сделки с недвижимостью</a></li>
                         <li role="separator" class="divider"></li>
@@ -45,15 +45,20 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Hello {{ Auth::user()->name }} <span class="caret"></span></a>
                         <ul class="dropdown">
+                            <li><a href="{{ route('places.index') }}">Места на карте</a></li>
+                            <li><a href="{{ route('places.index') }}">События на карте</a></li>
+                            <li><a href="{{ route('places.index') }}">Добавленное к местам</a></li>
+                            <li><a href="{{ route('places.index') }}">Добавленное к событиям</a></li>
+                            <li><a href="{{ route('places.index') }}">Настройки</a></li>
+
                             <li><a href="{{ route('posts.index') }}">Posts</a></li>
-                            <li><a href="{{ route('categories.index') }}">Categories</a></li>
+                            <li><a href="{{ route('categories.index') }}">Категории</a></li>
                             <li><a href="{{ route('tags.index') }}">Tags</a></li>
-                           <li><a href="{{ route('calendars.index') }}">Calendars</a></li>
                             <li role="separator" class="divider"></li>
                             <li> <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
-                                    Logout
+                                    Выход
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
