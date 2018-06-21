@@ -23,3 +23,4 @@ storage/*.key
 .idea
 Homestead.yaml
 Homestead.json
+.idea/
