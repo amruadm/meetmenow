@@ -9,7 +9,7 @@
             <h1>Все добавленные места</h1>
         </div>
         <div class="col-md-2">
-            <a href="{{ route('places.create') }}" class="btn btn-lg btn-block btn-primary btn-h1-spacing">Добавить место на карту</a>
+            <a href="{{ route('places.create') }}" class="btn btn-primary">Добавить место</a>
         </div>
         <div class="com-md-2">
             <hr>
