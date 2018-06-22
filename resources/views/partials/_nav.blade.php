@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
     <header>
-        <img class="img-responsive" src="logo.png" alt="Нотариус">
+        <img class="img-responsive"/>
     </header>
      </div>
 </div>
@@ -16,26 +16,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Нотариус VL</a>
+            <a class="navbar-brand" href="/">MeetMeBabe</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="{{ Request::is('/') ? "active": ""}}"><a href="{{ route('main') }}">Главная</a></li>
-                <li class="{{ Request::is('service') ? "active": ""}}"><a href="{{ route('services') }}">Услуги</a></li>
-                <li class="{{ Request::is('about') ? "active": ""}}"><a href="/rates">Тарифы</a></li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Информация <span class="caret"></span></a>
-                    <ul class="dropdown">
-                        <li><a href="{{ route('common') }}">Справочник</a></li>
-                        <li><a href="{{ route('heirs') }}">Наследникам</a></li>
-                        <li><a href="{{ route('estate') }}">Сделки с недвижимостью</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ route('corporate') }}">Юридические лица</a></li>
-                    </ul>
-                </li>
+                <li class="{{ Request::is('about') ? "active": ""}}"><a href="{{ route('about') }}">Справочник</a></li>
                 <li class="{{ Request::is('contact') ? "active": ""}}"><a href="{{ route('contact') }}" href="/contact">Контакты</a></li>
             </ul>
 
@@ -43,8 +31,13 @@
                 @if (Auth::check())
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Hello {{ Auth::user()->name }} <span class="caret"></span></a>
-                        <ul class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+                        <div class="dropdown" style="float: right;">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Меню
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
                             <li><a href="{{ route('places.index') }}">Места на карте</a></li>
                             <li><a href="{{ route('places.index') }}">События на карте</a></li>
                             <li><a href="{{ route('places.index') }}">Добавленное к местам</a></li>
@@ -54,23 +47,23 @@
 
                             <li><a href="{{ route('posts.index') }}">Posts</a></li>
                             <li><a href="{{ route('categories.index') }}">Категории</a></li>
-                            <li><a href="{{ route('tags.index') }}">Tags</a></li>
                             <li role="separator" class="divider"></li>
                             <li> <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                     Выход
                                 </a>
-
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
                             </li>
+                            </ul>
+                        </div>
                         </ul>
                     </li>
 
                 @else
-                    <a href="{{ route('login') }}" class="btn btn-default">Login</a>
+                    <a href="{{ route('login') }}" class="btn btn-default">Логин</a>
                 @endif
 
             </ul>

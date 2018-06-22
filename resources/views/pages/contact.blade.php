@@ -5,11 +5,9 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <p> Телефон: +7(423) 226-88-50  </p>
-            <p> Адрес: Владивосток, район "Центр", ул. Светланская, 108б оф. 2 </p>
-            <p> Email: eltinsk@mail.ru </p>
-            <h1>Контакт:</h1>
-            <hr>
+            MeetMe.
+            Пока мы небольшая команда из 5 человек.
+            Напишите нам!
             <form action="{{ url('contact') }}" method="POST">
                 {{ csrf_field() }}
                 <div class="form-group">

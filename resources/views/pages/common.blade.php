@@ -27,15 +27,7 @@
 
             @endforeach
         </div>
-        <div class="col-md-3 col-md-offset-1">
-            <h2>Расписание</h2>
-            <em>ПРИЕМ ГРАЖДАН</em>
-            <p>По рабочим дням:<br />
-                С 10:00 до 17:00 <br />
-                Обед с 13:00 до 14:00</p> <br />
-            <u>Выходные:</u><br />
-            <p>Суббота, Воскресенье</p><br />
-        </div>
+
     </div> <!-- end of header .row -->
 
 @stop
