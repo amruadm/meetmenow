@@ -72,6 +72,7 @@ $(document).ready(function () {
 
     function fail() {
         alert("it fails");
+        //
     }
    
 
