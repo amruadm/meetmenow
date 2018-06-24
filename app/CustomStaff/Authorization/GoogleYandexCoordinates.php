@@ -36,9 +36,10 @@ class GoogleYandexCoordinates
         //Guzzle)
         $client = new \GuzzleHttp\Client();
 
+        /*Внизу задается Город Улица номер дома*/
         $response = $client->get('http://maps.google.com/maps/api/geocode/json?', [
             'query' => [
-                'address' => 'Москва новый арбат 15'
+                'address' => 'Москва композиторская 21'
             ]
         ]);
 

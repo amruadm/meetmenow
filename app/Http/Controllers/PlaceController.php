@@ -108,13 +108,13 @@ class PlaceController extends Controller
     {
         // find the Place in the database and save as a var
         $place = Place::find($id);
-        $categories = Category::all();
-        $cats = array();
-        foreach ($categories as $category) {
-            $cats[$category->id] = $category->name;
-        }
+//        $categories = Category::all();
+//        $cats = array();
+//        foreach ($categories as $category) {
+//            $cats[$category->id] = $category->name;
+//        }
 
-        return view('places.edit')->withPlace($place)->withCategories($cats);
+        return view('places.edit')->withPlace($place); //->withCategories($cats);
     }
     /**
      * Update the specified resource in storage.

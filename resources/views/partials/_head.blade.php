@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>MeetMeBabe @yield('title', 'MeetMeBabe')</title>
-<link href="css/app.css" rel="stylesheet">
+<link href="{{ URL::to('/') }}/css/app.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
     body {
@@ -13,6 +13,7 @@
     }
     .navbar-default {
         background: #f5f5f5;
+        border-color: white;
     }
 </style>
 {{Html::style('css/styles.css')}}

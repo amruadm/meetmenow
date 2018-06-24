@@ -28,6 +28,9 @@
             {{ Form::label('title', 'Название:') }}
             {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
 
+            {{--{{ Form::label('category_id', "Категория:", ['class' => 'form-spacing-top']) }}--}}
+            {{--{{ Form::select('category_id', $categories, null, ['class' => 'form-control']) }}      --}}
+
             {{ Form::label('whatsapp', 'WhatsApp:') }}
             {{ Form::text('whatsapp', null, array('class' => 'form-control', 'maxlength' => '255')) }}
 

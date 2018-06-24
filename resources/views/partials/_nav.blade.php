@@ -44,8 +44,6 @@
                             <li><a href="{{ route('places.index') }}">Добавленное к событиям</a></li>
                             <li><a href="{{ route('places.index') }}">Настройки</a></li>
                             <li><a href="{{ route('places.index') }}">Мои маршруты</a></li>
-
-                            <li><a href="{{ route('posts.index') }}">Posts</a></li>
                             <li><a href="{{ route('categories.index') }}">Категории</a></li>
                             <li role="separator" class="divider"></li>
                             <li> <a href="{{ route('logout') }}"

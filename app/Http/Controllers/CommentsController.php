@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Comment;
-use App\Post;
+use App\Place;
 use Session;
 use Purifier;
 
@@ -23,7 +23,7 @@ class CommentsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $post_id)
+    public function store(Request $request, $place_id)
     {
         $this->validate($request, array(
             'name'      =>  'required|max:255',
@@ -31,21 +31,21 @@ class CommentsController extends Controller
             'comment'   =>  'required|min:5|max:2000'
             ));
 
-        $post = Post::find($post_id);
+        $place = Place::find($place_id);
 
         $comment = new Comment();
         $comment->name = Purifier::clean($request->name);
         $comment->email = Purifier::clean($request->email);
-        //$post->body = Purifier::clean($request->body);
+        //$place->body = Purifier::clean($request->body);
         $comment->comment = Purifier::clean($request->comment);
         $comment->approved = true;
-        $comment->post()->associate($post);
+        $comment->place()->associate($place);
 
         $comment->save();
 
         Session::flash('success', 'Комментарий добавлен');
 
-        return redirect()->route('blog.single', [$post->slug]);
+        return redirect()->route('blog.single', [$place->slug]);
     }
 
 
@@ -79,7 +79,7 @@ class CommentsController extends Controller
 
         Session::flash('success', 'Comment updated');
 
-        return redirect()->route('posts.show', $comment->post->id);
+        return redirect()->route('places.show', $comment->place->id);
     }
 
     public function delete($id)
@@ -97,11 +97,11 @@ class CommentsController extends Controller
     public function destroy($id)
     {
         $comment = Comment::find($id);
-        $post_id = $comment->post->id;
+        $place_id = $comment->place->id;
         $comment->delete();
 
         Session::flash('success', 'Комментарий удален');
 
-        return redirect()->route('posts.show', $post_id);
+        return redirect()->route('places.show', $place_id);
     }
 }

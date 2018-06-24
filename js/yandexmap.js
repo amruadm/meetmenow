@@ -1,4 +1,4 @@
- ymaps.ready(function () {
+ymaps.ready(function () {
             var map = new ymaps.Map('map', {
                 center: [55.650625, 37.62708],
                 zoom: 10
@@ -47,32 +47,46 @@
             // });
             //
             // map.geoObjects.add(placemark);
-             var lat = $('.place_lat_3').text();
-             var lng = $('.place_lng_3').text();
-             var placemark = new ymaps.Placemark([parseFloat(lat), parseFloat(lng)], {
-                 title: 'Север'
+             var lat = $('.place_lat_1').text();
+             var lng = $('.place_lng_1').text();
+             /*получение всех кооридинат из php списка places со страницы с картой/
+             recieive all coordinates from php places list from page with map*/
+             $(".main_place").get().forEach(function(entry, index, array) {
+                 console.log("INDEX" + (index + 1));
+                 var lat = $('.place_lat_' + (index + 1)).text();
+                 var lng = $('.place_lng_' + (index + 1)).text();
+                 var placemark = new ymaps.Placemark([parseFloat(lat), parseFloat(lng)], {
+                     title: 'Север'
 
-             }, {
-                 balloonContentLayout: MyBalloonContentLayout,
-                 hintContentLayout: ymaps.templateLayoutFactory.createClass(33)
-                 //balloonPanelMaxMapArea: 0
+                 }, {
+                     balloonContentLayout: MyBalloonContentLayout,
+                     hintContentLayout: ymaps.templateLayoutFactory.createClass(33)
+                     //balloonPanelMaxMapArea: 0
+                 });
+
+                 map.geoObjects.add(placemark);
              });
 
-             map.geoObjects.add(placemark);
+
+             // var placemark = new ymaps.Placemark([parseFloat(lat), parseFloat(lng)], {
+             //     title: 'Север'
+             //
+             // }, {
+             //     balloonContentLayout: MyBalloonContentLayout,
+             //     hintContentLayout: ymaps.templateLayoutFactory.createClass(33)
+             //     //balloonPanelMaxMapArea: 0
+             // });
+             //
+             // map.geoObjects.add(placemark);
 
 
         });
 
-        $(document).ready(function () {
-            $("#bamboho").on('click', 'button.alert', function() {
-                alert(1);
-            });
-        });
-
-
-        function myfunction() {
-            window.open("https://www.instagram.com/explore/tags/Зума/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
-        }
+$(document).ready(function () {
+    $("#bamboho").on('click', 'button.alert', function() {
+        alert(1);
+    });
+});
 
  function openInstagram() {
      window.open("https://www.instagram.com/explore/tags/Зума/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");

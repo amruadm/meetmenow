@@ -23,22 +23,18 @@ Route::post('password/reset', 'Auth\PasswordController@reset');
 
 // Categories
 Route::resource('categories', 'CategoryController', ['except' => ['create']]);
-Route::resource('tags', 'TagController', ['except' => ['create']]);
-Route::resource('calendars', 'CalendarController', ['except' => ['create']]);
 Route::resource('pages', 'PagesController', ['except' => ['create']]);
 //Route::controller('calendars', 'CalendarController');
 ;
 //Route::post('/', ['uses' => 'CalendarController@postUpdate2', 'as' => 'calendars.postUpdate2']);
 // Comments
-Route::post('comments/{post_id}', ['uses' => 'CommentsController@store', 'as' => 'comments.store']);
+Route::post('comments/{place_id}', ['uses' => 'CommentsController@store', 'as' => 'comments.store']);
 Route::get('comments/{id}/edit', ['uses' => 'CommentsController@edit', 'as' => 'comments.edit']);
 Route::put('comments/{id}', ['uses' => 'CommentsController@update', 'as' => 'comments.update']);
 Route::delete('comments/{id}', ['uses' => 'CommentsController@destroy', 'as' => 'comments.destroy']);
 Route::get('comments/{id}/delete', ['uses' => 'CommentsController@delete', 'as' => 'comments.delete']);
 Route::any('pages.services', array('as' => 'manage', 'uses' => 'AdminController@showWelcome'));
 
-Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
-Route::get('blog', ['uses' => 'BlogController@getIndex', 'as' => 'blog.index']);
 //Route::get('contact', 'PagesController@getContact');
 Route::get('/contact', ['as' => 'contact', 'uses' => 'PagesController@getContact']);
 
@@ -49,34 +45,9 @@ Route::get('/about', ['as' => 'about', 'uses' => 'PagesController@getAbout']);
 //Route::get('/', 'PagesController@getIndex');
 Route::get('/', ['as' => 'main', 'uses' => 'PagesController@getIndex']);
 
-Route::resource('posts', 'PostController');
-
 Route::resource('places', 'PlaceController');
-
-Route::get('/services', ['as' => 'services', 'uses' => 'PagesController@getServices']);
-
-Route::get('/rates', ['as' => 'rates', 'uses' => 'PagesController@getRates']);
-
-Route::get('/common', ['as' => 'common', 'uses' => 'PagesController@getCommon']);
-
-Route::get('/heirs', ['as' => 'heirs', 'uses' => 'PagesController@getHeirs']);
-
-Route::get('/estate', ['as' => 'estate', 'uses' => 'PagesController@getEstate']);
-
-Route::get('/corporate', ['as' => 'corporate', 'uses' => 'PagesController@getCorporate']);
-
-//Route::post('/', 'CalendarController@postFind');
-Route::get('/common', ['as' => 'common', 'uses' => 'PagesController@getCommon']);
 
 Route::post('common', 'PagesController@postCommon');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
-//
-//Route::group(['prefix' => 'dir'], function () {
-//    Route::group(['prefix' => 'ele'], function () {
-//        Route::controller('/', 'eleController@redirect');
-//    });
-//});

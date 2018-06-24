@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', '| Contact')
+@section('title', '| Контактная информация')
 
 @section('content')
     <div class="row">
@@ -14,17 +14,16 @@
                     <label name="email">Email:</label>
                     <input id="email" name="email" class="form-control">
                 </div>
-
                 <div class="form-group">
                     <label name="subject">Тема:</label>
                     <input id="subject" name="subject" class="form-control">
                 </div>
-
                 <div class="form-group">
                     <label name="message">Сообщение:</label>
-                    <textarea id="message" name="message" class="form-control">Напишите здесь ваше сообщение...</textarea>
-                </div>
+                    <textarea id="message" name="message" class="form-control" placeholder="Напишите здесь ваше сообщение...">
 
+                    </textarea>
+                </div>
                 <input type="submit" value="Послать сообщение" class="btn btn-success">
             </form>
         </div>
