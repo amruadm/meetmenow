@@ -1,82 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d06cefa4-7296-401a-b9c7-213a43e8cf35" name="Default" comment="second">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/TagController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Post.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_05_30_155417_create_post_tag_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_09_08_112634_create_posts_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_09_11_113727_create_tags_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_09_17_112134_create_calendar_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/pages/common.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/pages/corporate.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/pages/estate.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/pages/heirs.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/pages/rates.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/pages/services.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/css/calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/css/chessboard-0.3.0.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/css/chessboard-0.3.0.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/bB.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/bK.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/bN.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/bP.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/bQ.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/bR.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/wB.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/wK.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/wN.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/wP.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/wQ.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/places/img/chesspieces/wikipedia/wR.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/css/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/css/calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/css/chessboard-0.3.0.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/css/chessboard-0.3.0.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/css/parsley.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/css/select2.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/css/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/edit.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/bB.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/bK.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/bN.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/bP.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/bQ.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/bR.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/wB.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/wK.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/wN.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/wP.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/wQ.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/img/chesspieces/wikipedia/wR.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/posts/show.blade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/CustomStaff/Authorization/GoogleYandexCoordinates.php" afterPath="$PROJECT_DIR$/app/CustomStaff/Authorization/GoogleYandexCoordinates.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PlaceController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PlaceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/yandexmap.js" afterPath="$PROJECT_DIR$/js/yandexmap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/categories/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/categories/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/contact.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/contact.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/welcome.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/_footer.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/_footer.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/_head.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/_head.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/_nav.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/_nav.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/places/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/places/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/places/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/places/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/places/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/places/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/places/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/places/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+    <list default="true" id="d06cefa4-7296-401a-b9c7-213a43e8cf35" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/bB.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/bK.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/bN.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/bP.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/bQ.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/bR.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/wB.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/wK.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/wN.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/wP.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/wQ.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chesspieces/wikipedia/wR.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -93,8 +31,8 @@
       <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            <state relative-caret-position="51">
+              <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -442,35 +380,6 @@
             <path>
               <item name="meetme" type="b2602c69:ProjectViewProjectNode" />
               <item name="meetme" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="meetme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meetme" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="meetme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meetme" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="meetme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meetme" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="meetme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meetme" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="meetme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meetme" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -556,7 +465,7 @@
       <workItem from="1529701207699" duration="6925000" />
       <workItem from="1529781324593" duration="284000" />
       <workItem from="1529781661978" duration="130000" />
-      <workItem from="1529781852783" duration="11344000" />
+      <workItem from="1529781852783" duration="11549000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1522656566903</created>
@@ -642,11 +551,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529707466616</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="second">
+      <created>1529831141207</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1529831141207</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69835000" />
+    <option name="totallyTimeSpent" value="70040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="33" width="1370" height="656" extended-state="0" />
@@ -752,10 +668,10 @@
         <state relative-caret-position="2380">
           <caret line="140" column="14" lean-forward="false" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="14" />
           <folding>
-            <marker date="1529831119053" expanded="true" signature="68894:68911" ph="..." />
-            <marker date="1529831119053" expanded="true" signature="68894:68929" ph="..." />
-            <marker date="1529831119053" expanded="true" signature="68894:68942" ph="..." />
-            <marker date="1529831119053" expanded="true" signature="68894:68957" ph="..." />
+            <marker date="1529831326224" expanded="true" signature="58974:58991" ph="..." />
+            <marker date="1529831326224" expanded="true" signature="58974:59009" ph="..." />
+            <marker date="1529831326224" expanded="true" signature="58974:59022" ph="..." />
+            <marker date="1529831326224" expanded="true" signature="58974:59037" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1128,8 +1044,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        <state relative-caret-position="51">
+          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
           <folding />
         </state>
       </provider>
