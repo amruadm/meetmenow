@@ -5,6 +5,14 @@ namespace App\CustomStaff\Authorization;
 use Illuminate\Support\Facades\Session;
 use App\CustomStaff\Places\Coordinate;
 
+/**
+ * todo - сделать интерфейс UserCoordinatesProvider, от него реализовывать:
+ * todo -       UserCoordinates_Google, UserCoordinates_Yandex
+ * todo -       p.s. смотри, мож я ошибся ибо провайдер можно спутать с некоей фабрикой
+ *
+ * Class GoogleYandexCoordinates
+ * @package App\CustomStaff\Authorization
+ */
 class GoogleYandexCoordinates
 {
 
